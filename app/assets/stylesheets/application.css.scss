@@ -1,0 +1,76 @@
+@font-face {
+	font-family: 'wbook';
+	src:url('/fonts/wbook.eot');
+	src:url('/fonts/wbook.eot?#iefix') format('embedded-opentype'),
+		url('/fonts/wbook.woff') format('woff'),
+		url('/fonts/wbook.ttf') format('truetype'),
+		url('/fonts/wbook.svg#wbook') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'candara';
+  src: url('/fonts/candara-webfont.eot');
+  src: url('/fonts/candara-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/candara-webfont.woff') format('woff'),
+       url('/fonts/candara-webfont.ttf') format('truetype'),
+       url('/fonts/candara-webfont.svg#candararegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+[data-icon]:before , %icofont{
+font-family: 'wbook';
+content: attr(data-icon);
+speak: none;
+font-weight: normal;
+font-variant: normal;
+text-transform: none;
+line-height: 1;
+-webkit-font-smoothing: antialiased;
+}
+@import "variables";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootswatch";
+@import "font-awesome";
+@import "lib/anim";
+@import "mixin";
+@import "my/loader";
+@import "my/btn";
+@import "my/base";
+@import "lib/tags";
+@import "lib/tags_bootstrap";
+
+
+.view-animate{
+@include trans(0.3s);
+position: relative;
+-webkit-transform-origin: center bottom;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+
+opacity: 0;
+//-webkit-transform: scale(0);
+//-webkit-transform: translateY(100%);
+
+}
+
+.view-animate.ng-enter.ng-enter-active {
+opacity: 0;
+//-webkit-transform: scale(0);
+}
+.view-animate.ng-leave.ng-leave-active {
+opacity: 0;
+//-webkit-transform: scale(0);
+display: none;
+}
+
+body{
+  &.lol{
+    &_lol{
+    color: #000;
+    }
+  }
+}

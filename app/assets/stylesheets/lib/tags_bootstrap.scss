@@ -1,0 +1,126 @@
+tags-input {
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  min-height: 34px;
+}
+tags-input .host {
+  margin: 0;
+}
+
+tags-input .tags .tag-item {
+  color: white;
+  background: #18bc9c;
+}
+tags-input .tags .tag-item.selected {
+  color: white;
+  background: #0f7864;
+}
+tags-input .tags .tag-item .remove-button:hover {
+  text-decoration: none;
+}
+tags-input .autocomplete {
+  border-radius: 4px;
+}
+tags-input .autocomplete .suggestion-item.selected {
+  color: #262626;
+  background-color: whitesmoke;
+}
+tags-input .autocomplete .suggestion-item.selected em {
+  color: #262626;
+  background-color: whitesmoke;
+}
+tags-input .autocomplete .suggestion-item em {
+  color: black;
+  background-color: white;
+}
+
+.input-group tags-input {
+  padding: 0;
+  display: table-cell;
+}
+.input-group tags-input:not(:first-child) .tags {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.input-group tags-input:not(:last-child) .tags {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.input-group-lg tags-input:first-child .tags {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.input-group-lg tags-input:last-child .tags {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.input-group-sm tags-input:first-child .tags {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.input-group-sm tags-input:last-child .tags {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+tags-input.ti-input-lg, .input-group-lg tags-input {
+  min-height: 46px;
+}
+tags-input.ti-input-lg .tags, .input-group-lg tags-input .tags {
+  border-radius: 6px;
+}
+tags-input.ti-input-lg .tags .tag-item, .input-group-lg tags-input .tags .tag-item {
+  height: 38px;
+  line-height: 37px;
+  font-size: 18px;
+  border-radius: 6px;
+}
+tags-input.ti-input-lg .tags .tag-item .remove-button, .input-group-lg tags-input .tags .tag-item .remove-button {
+  font-size: 20px;
+}
+tags-input.ti-input-lg .tags .input, .input-group-lg tags-input .tags .input {
+  height: 38px;
+  font-size: 18px;
+}
+tags-input.ti-input-sm, .input-group-sm tags-input {
+  min-height: 30px;
+}
+tags-input.ti-input-sm .tags, .input-group-sm tags-input .tags {
+  border-radius: 3px;
+}
+tags-input.ti-input-sm .tags .tag-item, .input-group-sm tags-input .tags .tag-item {
+  height: 22px;
+  line-height: 21px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+tags-input.ti-input-sm .tags .tag-item .remove-button, .input-group-sm tags-input .tags .tag-item .remove-button {
+  font-size: 16px;
+}
+tags-input.ti-input-sm .tags .input, .input-group-sm tags-input .tags .input {
+  height: 22px;
+  font-size: 12px;
+}
+
+.has-feedback tags-input .tags {
+  padding-right: 30px;
+}
+
+.has-success tags-input .tags {
+border: 2px solid #18bc9c
+}
+
+.has-error tags-input .tags{
+border: 2px solid #e74c3c;
+}
+
+
+.has-warning tags-input .tags {
+  border-color: #8a6d3b;
+}
+.has-warning tags-input .tags.focused {
+  border-color: #66512c;
+}

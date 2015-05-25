@@ -1,0 +1,71 @@
+.btn-sq{
+width: 30px;
+height: 30px;
+@include border-radius(2px);
+display: inline-block;
+@include trans(0.2s);
+cursor: pointer;
+text-align: center;
+vertical-align: middle;
+-moz-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+background-color: #fff;
+position: relative;
+font-size: 1.25em;
+  i{position: relative;}
+  &.delete{
+  //background-color: #e8e4de;
+  color: #d73d56;
+  position: relative;
+    &:hover{
+    background-color: #d73d56;
+    color: #e8e4de;
+    }
+  }
+
+  &.ok{
+  color: #b3cd5b;
+    i{
+    top: 2px;
+    }
+    input{display: none;}
+    &:hover{
+    background-color: #b3cd5b;
+    color: #fff;
+    }
+  }
+  &.non{
+  color: #f1563d;
+    input{display: none;}
+    &:hover{
+    background-color: #f1563d;
+    color: #fff;
+    }
+  }
+  &.undefined{
+  color: #b9b4b3;
+    input{display: none;}
+    &:hover{
+    background-color: #b9b4b3;
+    color: #fff;
+    }
+  }
+  &.edit{
+  color: #787878;
+    i{
+    top: 2px;
+    }
+    &:hover{
+    background-color: #787878;
+    color: #fff;
+    }
+  }
+  &.reverse{
+  color: #787878;
+    &:hover{
+    background-color: #787878;
+    color: #fff;
+    }
+  }
+}

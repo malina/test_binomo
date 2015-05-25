@@ -1,0 +1,16 @@
+!!!
+%html{'ng-app' => 'TestApp'}
+  %head
+    %title Mailer
+    = stylesheet_link_tag "application", media: "all", :async => true, :type => "text/css"
+    = include_gon
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  %body
+    .overlay{"ng-show"=>"pendingRequests>0"}
+    = render 'layouts/sidebar'
+    %main.pages{role: "main"}
+      .mail-container
+        .content.view-animate{autoscroll: "true", "ui-view" => "", "ng-class" => "{mainpage : mainpage}"}
+          .col-content
+            = yield

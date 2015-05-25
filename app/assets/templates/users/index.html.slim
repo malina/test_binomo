@@ -1,0 +1,30 @@
+.row
+  .col-md-12
+    .well
+      form.form-inline name="userForm" ng-submit="submit(user)"
+        div.form-group<> ng-class="{'has-error': userForm.time.$error, 'has-success': userForm.time.$valid}"
+          input.form-control ng-model='user.time_zone' type="text" name='time' required='true' placeholder='Time Zone'
+        div.form-group<> ng-class="{'has-error': userForm.name.$error, 'has-success': userForm.name.$valid}"
+          input.form-control ng-model='user.name' type="text" name='name' required='true' placeholder='User name'
+        input.btn.btn-primary type="submit" ng-disabled="userForm.$invalid" value="Сохранить"
+
+    input.form-control type="text" ng-model="query" placeholder="Поиск"
+
+.row
+  .col-md-12
+    table.table.table-striped
+      tr
+        th
+          b Имя
+        th
+          b Часовой пояс
+        th Действия
+      tbody ng-repeat="user in users | limitTo:10 | filter:query"
+        tr.user
+          td.cell
+            | {{user.name}}
+          td.cell
+            | {{user.time_zone}}
+          td.cell
+            .btn-sq.delete ng-click="destroy(user)"
+              i.fa.fa-trash-o
